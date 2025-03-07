@@ -29,11 +29,9 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased overflow-hidden`}
       >
-        <div className="m-auto h-screen w-screen bg-white">
-          <div className="h-full w-screen">
-            <Navbar />
-            <main className="h-full w-full">{children}</main>
-          </div>
+        <div className="mx-auto h-full w-screen bg-white">
+          <Navbar />
+          <main className="h-full w-full">{children}</main>
         </div>
       </body>
     </html>
