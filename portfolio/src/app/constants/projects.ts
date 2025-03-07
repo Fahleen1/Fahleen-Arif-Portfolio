@@ -6,23 +6,20 @@ export const projects = [
       'https://aceternity.com/images/products/thumbnails/new/moonbeam.png',
   },
   {
-    title: 'Cursor',
+    title: 'Gericht',
     link: 'https://cursor.so',
-    thumbnail:
-      'https://aceternity.com/images/products/thumbnails/new/cursor.png',
+    thumbnail: '/assets/gericht.png',
   },
   {
-    title: 'Rogue',
+    title: 'Architecture studio',
     link: 'https://userogue.com',
-    thumbnail:
-      'https://aceternity.com/images/products/thumbnails/new/rogue.png',
+    thumbnail: '/assets/architecture-studio.png',
   },
 
   {
-    title: 'Editorially',
+    title: 'Tribute page',
     link: 'https://editorially.org',
-    thumbnail:
-      'https://aceternity.com/images/products/thumbnails/new/editorially.png',
+    thumbnail: '/assets/tribute-page.png',
   },
   {
     title: 'Editrix AI',

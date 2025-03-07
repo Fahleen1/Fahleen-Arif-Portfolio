@@ -2,6 +2,7 @@ import { motion } from 'motion/react';
 import Image from 'next/image';
 import Link from 'next/link';
 
+import SkillsSection from './components/SkillsSection';
 import { SocialMediaLinks } from './constants/items';
 import { projects } from './constants/projects';
 import { HeroParallax } from './ui/components/hero-parallax';
@@ -52,7 +53,7 @@ export default function Home() {
           </button>
         </div>
 
-        {/* Image Section (3rd Column) */}
+        {/* Image Section */}
         <div className="hidden lg:flex flex-1 items-center justify-center">
           <Image
             src="/your-image-path.jpg"
@@ -64,8 +65,11 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="h-[95%]">
+      <div className="gap-6">
         <HeroParallax projects={projects} />
+      </div>
+      <div className="gap-6">
+        <SkillsSection />
       </div>
     </div>
   );
