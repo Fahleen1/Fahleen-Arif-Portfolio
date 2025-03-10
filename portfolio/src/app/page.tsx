@@ -2,12 +2,16 @@ import { motion } from 'motion/react';
 import Image from 'next/image';
 import Link from 'next/link';
 
+import Footer from './components/Footer';
+import SkillsSection from './components/SkillsSection';
 import { SocialMediaLinks } from './constants/items';
+import { projects } from './constants/projects';
+import { HeroParallax } from './ui/components/hero-parallax';
 
 export default function Home() {
   return (
-    <div className="flex items-center justify-center min-h-screen p-8 font-[family-name:var(--font-geist-sans)] overflow-y-auto">
-      <div className="flex w-full max-w-7xl gap-10 mx-auto max-h-[calc(100vh-150px)]">
+    <div className="flex flex-col gap-9 overflow-hidden items-center justify-center min-h-screen p-4 font-[family-name:var(--font-geist-sans)]">
+      <div className="flex w-full max-w-7xl gap-10 mx-auto min-h-screen">
         {/* Social Media Section */}
         <div className="md:flex flex-col gap-3 w-[80px] sm:w-[100px] h-[60vh] hidden items-center justify-end">
           {SocialMediaLinks.map((link) => (
@@ -50,8 +54,8 @@ export default function Home() {
           </button>
         </div>
 
-        {/* Image Section (3rd Column) */}
-        <div className="hidden lg:flex flex-1 items-center h-[60vh] justify-center">
+        {/* Image Section */}
+        <div className="hidden lg:flex flex-1 items-center justify-center">
           <Image
             src="/your-image-path.jpg"
             width={300}
@@ -60,6 +64,16 @@ export default function Home() {
             className="rounded-lg shadow-lg"
           />
         </div>
+      </div>
+
+      <div className="gap-6">
+        <HeroParallax projects={projects} />
+      </div>
+      <div className="gap-6">
+        <SkillsSection />
+      </div>
+      <div>
+        <Footer />
       </div>
     </div>
   );
